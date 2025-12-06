@@ -14,7 +14,10 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private authService: AuthService) {}
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    
+
+
+
+    
     // 1. Obtenemos el token del AuthService
     const token = this.authService.getJwtToken();
 
